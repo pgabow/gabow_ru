@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { pngegg } from '../assets'
 
 const Hero = () => {
   return (
@@ -23,9 +24,9 @@ const Hero = () => {
             interfaces and web applications
           </p>
         </div>
+        {/* <img src={pngegg} alt='old comp' className='w-[80%] h-[80%] pt-30 object-contain' /> */}
       </div>
-
-      <ComputersCanvas />
+      <div>{/* <ComputersCanvas /> */}</div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

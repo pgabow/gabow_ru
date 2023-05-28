@@ -23,7 +23,7 @@ yarn dev
 
 Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view it in the browser.
 
-### Folder Structure
+### Folder Structure (i will add later)
  
 
 | File/Folder  	   									| Primary use    																								|
@@ -38,6 +38,10 @@ Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view it in the browser.
 
 
 ![Screenshot 1](/public/shots/shot1.jpg)
+
+![Screenshot 2](/public/shots/shot2.jpg)
+
+![Screenshot 3](/public/shots/shot3.jpg)
 
 
 ### Learn More

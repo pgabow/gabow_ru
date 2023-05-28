@@ -23,18 +23,21 @@ import {
   jobit,
   tripguide,
   threejs,
-	nextjs,
-} from "../assets";
+  nextjs,
+  nikitaPage,
+  stupidopia,
+  stupidblog,
+} from '../assets'
 
 export const navLinks = [
   {
     id: "about",
     title: "About",
   },
-  // {
-  //   id: "work",
-  //   title: "Work",
-  // },
+  {
+    id: "work",
+    title: "Works",
+  },
   {
     id: "contact",
     title: "Contact",
@@ -61,14 +64,14 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
+  // {
+  //   name: "HTML 5",
+  //   icon: html,
+  // },
+  // {
+  //   name: "CSS 3",
+  //   icon: css,
+  // },
   {
     name: "JavaScript",
     icon: javascript,
@@ -85,30 +88,30 @@ const technologies = [
     name: "Redux Toolkit",
     icon: redux,
   },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+  // {
+  //   name: "Tailwind CSS",
+  //   icon: tailwind,
+  // },
+  // {
+  //   name: "Node JS",
+  //   icon: nodejs,
+  // },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "Next JS",
     icon: nextjs,
   },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
   {
     name: "docker",
     icon: docker,
@@ -197,33 +200,40 @@ const testimonials = [
   },
 ];
 
+// blue-text-gradient
+// pink-text-gradient
+// green-text-gradient
+// orange-text-gradient
+// green-pink-gradient
+// violet-gradient
+
 const projects = [
   {
-    name: '',
-    description: '',
+    name: 'Nikita.gabow.ru',
+    description: 'Personal page my son' + `\n`,
     tags: [
       {
-        name: 'react',
+        name: 'html',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'css',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'javascript',
         color: 'pink-text-gradient',
       },
     ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
+    image: nikitaPage,
+    source_code_link: 'http://nikita.gabow.ru/',
   },
   {
-    name: '',
-    description: '',
+    name: 'Stupidopia',
+    description: 'Stupidopia is AI prompting tool for share stupid prompts',
     tags: [
       {
-        name: 'react',
+        name: 'nextjs',
         color: 'blue-text-gradient',
       },
       {
@@ -231,32 +241,40 @@ const projects = [
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'tailwind',
         color: 'pink-text-gradient',
       },
+      {
+        name: 'aws-s3',
+        color: 'orange-text-gradient',
+      },
     ],
-    image: jobit,
-    source_code_link: 'https://github.com/',
+    image: stupidopia,
+    source_code_link: 'https://stupidopia.vercel.app/',
   },
   {
-    name: '',
-    description: '',
+    name: 'Stupid AI Blog',
+    description: `Stupid AI-powered John Doe's Blog`,
     tags: [
       {
         name: 'nextjs',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'tailwind',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'graphql',
         color: 'pink-text-gradient',
       },
+      {
+        name: 'hygraph',
+        color: 'orange-text-gradient',
+      },
     ],
-    image: tripguide,
-    source_code_link: 'https://github.com/',
+    image: stupidblog,
+    source_code_link: 'https://stupid-ai-johndoe-blogs.vercel.app/',
   },
 ]
 

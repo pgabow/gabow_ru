@@ -7,6 +7,8 @@ import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 import { sendMessageToTelegram } from '../utils/sendMessageToTelegram'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Contact = () => {
   const formRef = useRef()
@@ -17,7 +19,7 @@ const Contact = () => {
   })
 
   const [loading, setLoading] = useState(false)
-
+  const notify = () => toast.success('Message sent successfully!')
   const handleChange = (e) => {
     const { target } = e
     const { name, value } = target
@@ -30,31 +32,39 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setLoading(true)
+    if (form.name && form.email && form.message) {
+      setLoading(true)
 
-    sendMessageToTelegram(`Pgabow.ru \nЮзер ${form.name}, email ${form.email} пишет: \n'${form.message}'`)
-    try {
-      setLoading(false)
-      setForm({
-        name: '',
-        email: '',
-        message: '',
-      })
-    } catch {
-      setLoading(false)
-      console.error(error)
+      sendMessageToTelegram(
+        `Pgabow.ru \n\nЮзер ${form.name}, email ${form.email} пишет: \n\n'${form.message}'`
+      )
+        .then(() => {
+          setLoading(false)
+					notify()
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          })
+        })
+        .catch((error) => {
+          setLoading(false)
+          console.error(error)
+        })
     }
 
-    // sendMessageToTelegram(`Юзер ${form.name}, email ${form.email} пишет: \n'${form.message}'`).then(
-    //   () => {
-    //     setLoading(false)
-    //     setForm({
-    //       name: '',
-    //       email: '',
-    //       message: '',
-    //     })
-    //   }
-    // )
+    // sendMessageToTelegram(`Pgabow.ru \nЮзер ${form.name}, email ${form.email} пишет: \n'${form.message}'`)
+    // try {
+    //   setLoading(false)
+    //   setForm({
+    //     name: '',
+    //     email: '',
+    //     message: '',
+    //   })
+    // } catch {
+    //   setLoading(false)
+    //   console.error(error)
+    // }
 
     // mail again
     // emailjs
@@ -154,6 +164,7 @@ const Contact = () => {
         {' '}
         © {new Date().getFullYear()} - All Rights <span className='underline'>Not Reserved</span>
       </p>
+      <ToastContainer position='bottom-center' />
     </>
   )
 }

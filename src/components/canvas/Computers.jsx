@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { pngegg } from '../../assets'
 
 import CanvasLoader from "../Loader";
 
@@ -34,7 +35,7 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 900px)");
 
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
@@ -54,25 +55,28 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+    <>
+      <img src={pngegg} alt='logo' className='pl-80 pt-40 w-[50%] h-[50%] object-contain' />
+    </>
+    // <Canvas
+    //   frameloop='demand'
+    //   shadows
+    //   dpr={[1, 2]}
+    //   camera={{ position: [20, 3, 5], fov: 25 }}
+    //   gl={{ preserveDrawingBuffer: true }}
+    // >
+    //   <Suspense fallback={<CanvasLoader />}>
+    //     <OrbitControls
+    //       enableZoom={false}
+    //       maxPolarAngle={Math.PI / 2}
+    //       minPolarAngle={Math.PI / 2}
+    //     />
+    //     <Computers isMobile={isMobile} />
+    //   </Suspense>
 
-      <Preload all />
-    </Canvas>
-  );
+    //   <Preload all />
+    // </Canvas>
+  )
 };
 
 export default ComputersCanvas;

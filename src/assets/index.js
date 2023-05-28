@@ -7,6 +7,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import extlink from './extlink.svg'
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -31,8 +32,19 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import pngegg from './pngegg.png'
+
+import nikitaPage from './nikita.png'
+import stupidopia from './stupidopia.png'
+import stupidblog from './stupidblog.png'
+
 
 export {
+	nikitaPage,
+	stupidopia,
+	stupidblog,
+	pngegg,
+	extlink,
   logo,
 	logoW,
   backend,
